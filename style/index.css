@@ -1,1 +1,125 @@
-/*# sourceMappingURL=index.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url(../../Fonts/Merriweather_48pt-Light.ttf);
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../../Fonts/Poppins-Medium.ttf);
+}
+body {
+  text-align: center;
+  background: -webkit-gradient(linear, right top, left top, from(#000000), to(rgba(255, 50, 50, 0.7254901961)));
+  background: linear-gradient(to left, #000000, rgba(255, 50, 50, 0.7254901961));
+  font-family: "Poppins";
+  font-weight: 700;
+}
+
+header {
+  color: whitesmoke;
+  height: 100vh;
+  width: 100%;
+}
+header .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .navbar .navbar-left ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header .navbar .navbar-left ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 20px;
+}
+header .navbar .navbar-left ul li a {
+  color: whitesmoke;
+  text-decoration: none;
+  border: 2px solid red;
+  padding: 10px;
+  background: black;
+  border-radius: 150px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+header .navbar .navbar-left ul li a:hover {
+  background: whitesmoke;
+  color: black;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  border: 2px dashed blue;
+}
+header .navbar .navbar-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header .navbar .navbar-right li {
+  margin: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+header .navbar .navbar-right li:hover {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+header .navbar .navbar-right li a {
+  color: whitesmoke;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+header .navbar .navbar-right li a:hover {
+  color: aquamarine;
+}
+header .about {
+  margin-top: 200px;
+}
+header .about h1 {
+  font-size: 3rem;
+  margin: 20px;
+}
+header .about button {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.716);
+  border: 2px solid black;
+  color: whitesmoke;
+  border-radius: 5px;
+  margin: 20px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+header .about button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.panswer {
+  color: whitesmoke;
+  font-size: 1.75rem;
+  letter-spacing: 5px;
+  font-family: "Merriweather", cursive;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}/*# sourceMappingURL=index.css.map */
