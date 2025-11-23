@@ -8,24 +8,18 @@
 
 @font-face {
   font-family: "Merriweather";
-  src: url(../../Fonts/Merriweather_48pt-Light.ttf);
+  src: url(../Fonts/Merriweather_48pt-Light.ttf);
 }
 @font-face {
   font-family: "Poppins";
-  src: url(../../Fonts/Poppins-Medium.ttf);
+  src: url(../Fonts/Poppins-Medium.ttf);
 }
-body {
-  text-align: center;
-  background: -webkit-gradient(linear, right top, left top, from(#000000), to(rgba(255, 50, 50, 0.7254901961)));
-  background: linear-gradient(to left, #000000, rgba(255, 50, 50, 0.7254901961));
-  font-family: "Poppins";
-  font-weight: 700;
-}
-
 header {
   color: whitesmoke;
   height: 100vh;
   width: 100%;
+  background: url(../img/headerbj.jpg) center/cover no-repeat;
+  text-align: center;
 }
 header .navbar {
   display: -webkit-box;
@@ -37,6 +31,8 @@ header .navbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: rgb(102, 205, 170);
+  padding: 10px;
 }
 header .navbar .navbar-left ul {
   display: -webkit-box;
@@ -55,10 +51,9 @@ header .navbar .navbar-left ul li {
 header .navbar .navbar-left ul li a {
   color: whitesmoke;
   text-decoration: none;
-  border: 2px solid red;
+  border: 2px solid rgb(0, 0, 139);
   padding: 10px;
-  background: black;
-  border-radius: 150px;
+  background: transparent;
   cursor: pointer;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -90,7 +85,7 @@ header .navbar .navbar-right li a {
   transition: 0.5s;
 }
 header .navbar .navbar-right li a:hover {
-  color: aquamarine;
+  color: rgb(0, 0, 139);
 }
 header .about {
   margin-top: 200px;
@@ -122,4 +117,6 @@ header .about button:hover {
   font-family: "Merriweather", cursive;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  max-width: 1300px;
+  margin: 0 auto;
 }/*# sourceMappingURL=index.css.map */

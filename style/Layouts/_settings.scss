@@ -6,16 +6,10 @@
 }
 @font-face {
     font-family: "Merriweather";
-    src: url(../../Fonts/Merriweather_48pt-Light.ttf);
+    src: url(../Fonts/Merriweather_48pt-Light.ttf);
 }
 @font-face {
     font-family: "Poppins";
-    src: url(../../Fonts/Poppins-Medium.ttf);
+    src: url(../Fonts/Poppins-Medium.ttf);
 }
 
-body{
-    text-align: center;
-    background: linear-gradient(to left, #000000,#ff3232b9);
-    font-family: "Poppins";
-    font-weight: 700;
-}
