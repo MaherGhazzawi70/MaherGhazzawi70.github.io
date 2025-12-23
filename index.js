@@ -3,7 +3,7 @@ const Btn2 = document.getElementById("btn2");
 const Btn3 = document.getElementById("btn3");
 const Btn4 = document.getElementById("btn4");
 const p1 = document.getElementById("answer");
-const Mousemove = document.querySelector(".mousemove");
+const navbar = document.querySelector(".navbar");
 
 
 Btn1.addEventListener("click",() =>{
@@ -26,7 +26,11 @@ Btn4.addEventListener("click",() =>{
     answer.classList.add("panswer");
     
 })
-window.addEventListener("mousemove",(e) =>{
-    Mousemove.style.left = e.pageX + "px";
-    Mousemove.style.top = e.pageY + "px";
+window.addEventListener("scroll", (e) => {
+    
+if (window.scrollY > 0) {
+navbar.style.background = "rgba(0, 12, 83, 1)";
+
+}
 });
+

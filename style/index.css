@@ -21,6 +21,11 @@ header {
   background: url(../img/headerbj.jpg) center/cover no-repeat;
   text-align: center;
 }
+@media screen and (max-width: 768px) {
+  header {
+    overflow-x: hidden;
+  }
+}
 header .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,10 +39,23 @@ header .navbar {
   background: rgb(102, 205, 170);
   padding: 10px;
 }
+@media screen and (max-width: 768px) {
+  header .navbar {
+    display: none;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+}
 header .navbar .navbar-left ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border: none;
+}
+@media screen and (max-width: 968px) {
+  header .navbar .navbar-left ul {
+    border: none;
+  }
 }
 header .navbar .navbar-left ul li {
   display: -webkit-box;
@@ -47,6 +65,7 @@ header .navbar .navbar-left ul li {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 20px;
+  border: none;
 }
 header .navbar .navbar-left ul li a {
   color: whitesmoke;
@@ -85,7 +104,7 @@ header .navbar .navbar-right li a {
   transition: 0.5s;
 }
 header .navbar .navbar-right li a:hover {
-  color: rgb(0, 0, 139);
+  color: rgb(0, 166, 255);
 }
 header .about {
   margin-top: 200px;
@@ -109,6 +128,12 @@ header .about button:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
+@media screen and (max-width: 768px) {
+  header .about button {
+    display: block;
+    margin: 20px auto;
+  }
+}
 
 .panswer {
   color: whitesmoke;
@@ -119,4 +144,15 @@ header .about button:hover {
   transition: 0.2s;
   max-width: 1300px;
   margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .panswer {
+    font-size: 0.75rem;
+    max-width: 400px;
+    min-height: 500px;
+  }
+}
+
+.projects {
+  height: 200vh;
 }/*# sourceMappingURL=index.css.map */

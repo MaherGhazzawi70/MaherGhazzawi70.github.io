@@ -4,6 +4,9 @@ header {
   width: 100%;
   background: url(../img/headerbj.jpg) center/cover no-repeat;
   text-align: center;
+  @media screen and (max-width: 768px) {
+    overflow-x: hidden;
+  }
 
   .navbar {
     display: flex;
@@ -11,13 +14,24 @@ header {
     align-items: center;
     background: rgb(102,205,170);
     padding: 10px;
+    @media screen and (max-width: 768px) {
+    display: none;
+    transition: 0.5s ease;
+  }
+  
     .navbar-left {
-      ul {
+      ul{
         display: flex;
+        border: none;
+         @media screen and (max-width: 968px) {
+    border: none;
+  }
+
         li {
           display: flex;
           justify-content: space-between;
           margin: 0 20px;
+          border: none;
           a {
             color: whitesmoke;
             text-decoration: none;
@@ -49,7 +63,7 @@ header {
             color: whitesmoke;
             transition: 0.5s;
             &:hover{
-                color: rgb(0,0,139);
+                color: rgb(0, 166, 255);
             }
         }
       }
@@ -73,6 +87,11 @@ header {
             &:hover{
             transform: scale(1.05);
             }
+            @media screen and (max-width: 768px) {
+    display: block;
+    margin: 20px auto;
+
+  }
         }
   }
 }
@@ -84,4 +103,10 @@ header {
     transition: 0.2s;
     max-width: 1300px;
     margin: 0 auto;
+
+    @media screen and (max-width: 768px) {
+    font-size: 0.75rem;
+    max-width: 400px;
+    min-height: 500px;
+  }
 }
