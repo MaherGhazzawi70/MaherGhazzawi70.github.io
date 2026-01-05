@@ -1,3 +1,81 @@
-.projects{
-    height: 200vh;
+@import url('https://fonts.googleapis.com/css2?family=Tinos&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital@0;1&display=swap');
+.projects {
+  height: 500px;
+  text-align: center;
+  background-color: rgb(255, 233, 124);
+  font-size: 2rem;
+
+  h1{
+    color: black;
+  }
+
+  h3 {
+    font-size: 3rem;
+    margin-top: 20px;
+    color: black;
+
+    #target {
+      display: inline-block;
+      margin-left: 10px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        background: salmon;
+        height: 3rem;
+        width: 3px;
+        top: 0;
+        transform: translateY(10%);
+        animation: anim 0.8s linear infinite;
+        @keyframes anim {
+          50% {
+            opacity: 0.1;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  .container {
+    background: rgb(0, 0, 0);
+    margin-top: 20px;
+    height: 180px;
+  }
+  .container ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 30px;
+  }
+  .container ul li a {
+    color: whitesmoke;
+    text-decoration: none;
+    background: salmon;
+    padding: 5px;
+    border-radius: 5px;
+    text-transform: capitalize;
+  }
+}
+.Skills h3{
+  font-size: 2rem;
+  text-align: center;
+}
+.sprache{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  background:salmon;
+  width: 80%;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: -1px 4px 20px 5px;
+
 }

@@ -1,9 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Tinos&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital@0;1&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   list-style: none;
+  font-family: "Tinos", serif;
 }
 
 @font-face {
@@ -154,5 +157,103 @@ header .about button:hover {
 }
 
 .projects {
-  height: 200vh;
+  height: 500px;
+  text-align: center;
+  background-color: rgb(255, 233, 124);
+  font-size: 2rem;
+}
+.projects h1 {
+  color: black;
+}
+.projects h3 {
+  font-size: 3rem;
+  margin-top: 20px;
+  color: black;
+}
+.projects h3 #target {
+  display: inline-block;
+  margin-left: 10px;
+  position: relative;
+}
+.projects h3 #target::after {
+  content: "";
+  position: absolute;
+  background: salmon;
+  height: 3rem;
+  width: 3px;
+  top: 0;
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
+  -webkit-animation: anim 0.8s linear infinite;
+          animation: anim 0.8s linear infinite;
+}
+@-webkit-keyframes anim {
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes anim {
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.projects .container {
+  background: rgb(0, 0, 0);
+  margin-top: 20px;
+  height: 180px;
+}
+.projects .container ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+  padding-top: 30px;
+}
+.projects .container ul li a {
+  color: whitesmoke;
+  text-decoration: none;
+  background: salmon;
+  padding: 5px;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+.Skills h3 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.sprache {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  background: salmon;
+  width: 80%;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: -1px 4px 20px 5px;
+          box-shadow: -1px 4px 20px 5px;
 }/*# sourceMappingURL=index.css.map */
