@@ -13,5 +13,9 @@
     font-family: "Poppins";
     src: url(../Fonts/Poppins-Medium.ttf);
 }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Falls du einen fixed Header hast */
+}
 
 

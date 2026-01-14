@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Tinos&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital@0;1&display=swap');
-.projects {
+@import url("https://fonts.googleapis.com/css2?family=Tinos&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital@0;1&display=swap");
+#projects {
   height: 500px;
   text-align: center;
   background-color: rgb(255, 233, 124);
   font-size: 2rem;
 
-  h1{
+  h1 {
     color: black;
   }
 
@@ -61,21 +61,147 @@
     text-transform: capitalize;
   }
 }
-.Skills h3{
+#Skills h3 {
   font-size: 2rem;
   text-align: center;
 }
-.sprache{
+.sprache {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  background:salmon;
+  background: salmon;
   width: 80%;
   margin: 10px auto;
   padding: 20px;
   border-radius: 5px;
   box-shadow: -1px 4px 20px 5px;
+}
+#contact {
+  width: 90%;
+  height: 600px;
+  background: silver;
+  margin: 20px auto;
 
+  #contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+
+    .right-part {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      margin: 10px 0;
+      height: 100%;
+      border-right: 2px solid rgb(101, 95, 95);
+      .right-part-container {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+
+        #name,
+        #email,
+        #lastname {
+          height: 30px;
+          width: 300px;
+          background: rgba(245, 245, 245, 0.399);
+          border-radius: 5px;
+          border: 2px solid goldenrod;
+          font-size: 1.5rem;
+        }
+        #Message {
+          background: rgba(245, 245, 245, 0.399);
+          resize: none;
+        }
+      }
+    }
+    .left-part {
+      display: grid;
+      grid-template-rows: 10% 20% 70%;
+      grid-template-columns: 100%;
+
+      h3 {
+        text-align: center;
+        font-size: 2rem;
+        color: black;
+      }
+      #title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        #befor,
+        #after {
+          height: 30px;
+          font-size: 1.3rem;
+          padding: 0px 10px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        #befor {
+          margin-left: 15px;
+        }
+        #after {
+          margin-right: 15px;
+        }
+      }
+      .calendar {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 2px;
+        margin-bottom: 30px;
+        align-items: center;
+        justify-content: center;
+      }
+      .day.other-month {
+    color: #ccc;
+}
+
+      .day-name {
+        text-align: center;
+        font-weight: bold;
+        color: salmon;
+        padding: 3px 0;
+        margin-right: 5px;
+        margin-top: 30px;
+      }
+
+      .day {
+        aspect-ratio: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #e0e0e0;
+        margin-left: 35px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: white;
+        font-weight: 200;
+        position: relative;
+        height: 20px;
+        width: 20px;
+        display: block;
+        @media (min-width:1000px) {
+          display: block;
+        }
+      }
+      .day:hover {
+        background: #f3f0ff;
+        transform: scale(1.05);
+        border-color: #667eea;
+      }
+      .day.selected {
+        background: #667eea;
+        color: white;
+        border-color: #667eea;
+        animation: pulse 0.3s ease;
+      }
+    }
+  }
 }

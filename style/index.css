@@ -17,6 +17,11 @@
   font-family: "Poppins";
   src: url(../Fonts/Poppins-Medium.ttf);
 }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Falls du einen fixed Header hast */
+}
+
 header {
   color: whitesmoke;
   height: 100vh;
@@ -109,14 +114,16 @@ header .navbar .navbar-right li a {
 header .navbar .navbar-right li a:hover {
   color: rgb(0, 166, 255);
 }
-header .about {
+header #about {
   margin-top: 200px;
+  -webkit-transition: 2s ease;
+  transition: 2s ease;
 }
-header .about h1 {
+header #about h1 {
   font-size: 3rem;
   margin: 20px;
 }
-header .about button {
+header #about button {
   padding: 10px;
   background: rgba(0, 0, 0, 0.716);
   border: 2px solid black;
@@ -127,12 +134,12 @@ header .about button {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-header .about button:hover {
+header #about button:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
 @media screen and (max-width: 768px) {
-  header .about button {
+  header #about button {
     display: block;
     margin: 20px auto;
   }
@@ -156,26 +163,26 @@ header .about button:hover {
   }
 }
 
-.projects {
+#projects {
   height: 500px;
   text-align: center;
   background-color: rgb(255, 233, 124);
   font-size: 2rem;
 }
-.projects h1 {
+#projects h1 {
   color: black;
 }
-.projects h3 {
+#projects h3 {
   font-size: 3rem;
   margin-top: 20px;
   color: black;
 }
-.projects h3 #target {
+#projects h3 #target {
   display: inline-block;
   margin-left: 10px;
   position: relative;
 }
-.projects h3 #target::after {
+#projects h3 #target::after {
   content: "";
   position: absolute;
   background: salmon;
@@ -203,12 +210,12 @@ header .about button:hover {
     opacity: 1;
   }
 }
-.projects .container {
+#projects .container {
   background: rgb(0, 0, 0);
   margin-top: 20px;
   height: 180px;
 }
-.projects .container ul {
+#projects .container ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   -webkit-box-align: center;
@@ -220,7 +227,7 @@ header .about button:hover {
   gap: 30px;
   padding-top: 30px;
 }
-.projects .container ul li a {
+#projects .container ul li a {
   color: whitesmoke;
   text-decoration: none;
   background: salmon;
@@ -229,7 +236,7 @@ header .about button:hover {
   text-transform: capitalize;
 }
 
-.Skills h3 {
+#Skills h3 {
   font-size: 2rem;
   text-align: center;
 }
@@ -256,4 +263,165 @@ header .about button:hover {
   border-radius: 5px;
   -webkit-box-shadow: -1px 4px 20px 5px;
           box-shadow: -1px 4px 20px 5px;
+}
+
+#contact {
+  width: 90%;
+  height: 600px;
+  background: silver;
+  margin: 20px auto;
+}
+#contact #contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 600px;
+}
+#contact #contact-container .right-part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px 0;
+  height: 100%;
+  border-right: 2px solid rgb(101, 95, 95);
+}
+#contact #contact-container .right-part .right-part-container {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+#contact #contact-container .right-part .right-part-container #name,
+#contact #contact-container .right-part .right-part-container #email,
+#contact #contact-container .right-part .right-part-container #lastname {
+  height: 30px;
+  width: 300px;
+  background: rgba(245, 245, 245, 0.399);
+  border-radius: 5px;
+  border: 2px solid goldenrod;
+  font-size: 1.5rem;
+}
+#contact #contact-container .right-part .right-part-container #Message {
+  background: rgba(245, 245, 245, 0.399);
+  resize: none;
+}
+#contact #contact-container .left-part {
+  display: grid;
+  grid-template-rows: 10% 20% 70%;
+  grid-template-columns: 100%;
+}
+#contact #contact-container .left-part h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: black;
+}
+#contact #contact-container .left-part #title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+}
+#contact #contact-container .left-part #title #befor,
+#contact #contact-container .left-part #title #after {
+  height: 30px;
+  font-size: 1.3rem;
+  padding: 0px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#contact #contact-container .left-part #title #befor {
+  margin-left: 15px;
+}
+#contact #contact-container .left-part #title #after {
+  margin-right: 15px;
+}
+#contact #contact-container .left-part .calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  margin-bottom: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#contact #contact-container .left-part .day.other-month {
+  color: #ccc;
+}
+#contact #contact-container .left-part .day-name {
+  text-align: center;
+  font-weight: bold;
+  color: salmon;
+  padding: 3px 0;
+  margin-right: 5px;
+  margin-top: 30px;
+}
+#contact #contact-container .left-part .day {
+  aspect-ratio: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #e0e0e0;
+  margin-left: 35px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: white;
+  font-weight: 200;
+  position: relative;
+  height: 20px;
+  width: 20px;
+  display: block;
+}
+@media (min-width: 1000px) {
+  #contact #contact-container .left-part .day {
+    display: block;
+  }
+}
+#contact #contact-container .left-part .day:hover {
+  background: #f3f0ff;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  border-color: #667eea;
+}
+#contact #contact-container .left-part .day.selected {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+  -webkit-animation: pulse 0.3s ease;
+          animation: pulse 0.3s ease;
 }/*# sourceMappingURL=index.css.map */

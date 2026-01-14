@@ -69,8 +69,9 @@ header {
       }
     }
   }
-  .about{
+  #about{
     margin-top: 200px;
+    transition: 2s ease;
     h1{
         font-size: 3rem;
         margin: 20px;

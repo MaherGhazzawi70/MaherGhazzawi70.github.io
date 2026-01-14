@@ -5,6 +5,12 @@ const Btn4 = document.getElementById("btn4");
 const p1 = document.getElementById("answer");
 const navbar = document.querySelector(".navbar");
 const target = document.getElementById("target");
+const form = document.getElementById("contact-container");
+const title = document.getElementById("month-title");
+const KalenderAfter = document.getElementById("after");
+const KalenderBefor = document.getElementById("befor");
+const calendar = document.getElementById('calendar');
+const month = document.getElementById("month")
 
 Btn1.addEventListener("click", () => {
   answer.textContent =
@@ -67,3 +73,110 @@ const loop = () => {
   }, 60);
 };
 loop();
+const monthNames = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 
+                   'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
+const dayNames = ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'];
+let currentDate = new Date();
+let selectedDate = null;
+let todos = {};
+function DisplayDays(){
+  calendar.innerHTML = ""
+  dayNames.forEach(day => {
+  const Dayweeks = document.createElement('div');
+  Dayweeks.className = 'day-name';
+  Dayweeks.textContent = day;
+  calendar.appendChild(Dayweeks);
+});
+}
+DisplayDays();
+
+function updateCalendar() {
+  calendar.innerHTML = "";        // ⬅️ ALLES löschen
+  DisplayDays();                  // ⬅️ Wochentage neu anzeigen
+
+  const year = currentDate.getFullYear();
+  const month = currentDate.getMonth();    
+
+  title.textContent = `${monthNames[month]} ${year}`;
+
+  const firstDay = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const prevMonthDays = new Date(year, month, 0).getDate();
+
+  // Tage vom Vormonat
+  for (let i = firstDay - 1; i >= 0; i--) {
+    calendar.appendChild(createDayElement(prevMonthDays - i, true));
+  }
+
+  // Aktueller Monat
+  for (let day = 1; day <= daysInMonth; day++) {
+    calendar.appendChild(createDayElement(day, false));
+  }
+
+  // Restliche Felder bis 42
+  const remainingDays = 42 - (firstDay + daysInMonth);
+  for (let day = 1; day <= remainingDays; day++) {
+    calendar.appendChild(createDayElement(day, true));
+  }
+}
+
+function createDayElement(day, isOtherMonth) {
+    const dayEl = document.createElement('div');
+    dayEl.className = 'day';
+    dayEl.textContent = day;
+    
+    if (isOtherMonth) {
+        dayEl.classList.add('other-month');
+    } else {
+        const dateKey = getDateKey(currentDate.getFullYear(), currentDate.getMonth(), day);
+        
+        if (todos[dateKey] && todos[dateKey].length > 0) {
+            dayEl.classList.add('has-tasks');
+        }
+        
+        dayEl.addEventListener('click', () => selectDate(day));
+        
+        if (selectedDate && 
+            selectedDate.getDate() === day && 
+            selectedDate.getMonth() === currentDate.getMonth() &&
+            selectedDate.getFullYear() === currentDate.getFullYear()) {
+            dayEl.classList.add('selected');
+        }
+    }
+    
+    return dayEl;
+}
+function selectDate(day) {
+    selectedDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
+    renderCalendar();
+    updateTodoSection();
+}
+
+function getDateKey(year, month, day) {
+    return `${year}-${month}-${day}`;
+}
+KalenderBefor.addEventListener('click', (e) => {
+  e.preventDefault();
+  currentDate.setMonth(currentDate.getMonth() - 1);
+  updateCalendar();
+});
+
+
+KalenderAfter.addEventListener('click', (e) => {
+  e.preventDefault();
+  currentDate.setMonth(currentDate.getMonth() + 1);
+  updateCalendar();
+});
+
+updateCalendar();
+
+ 
+
+
+
+
+
+
+
+
+
