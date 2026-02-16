@@ -1,191 +1,356 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maher Ghazzawi Portfolio</title>
-    <link rel="stylesheet" href="./style/index.css" />
-    <link rel="Shortcut icon" href="./Img/Shortcut icon HTML.png" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <!--=============== REMIXICON ===============-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!--=============== SWIPER CSS ===============-->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
+
+    <!--=============== CSS ===============-->
+
+    <title>Maher Ghazzawi Portfolio</title>
   </head>
   <body>
-    <header>
-      <div class="navbar">
-        <nav class="navbar-left">
-          <ul id="ul-left">
-            <li><a href="#about">Über mich</a></li>
-            <li><a href="#projects">Projekte</a></li>
-            <li><a href="#Skills">Fähigkeiten</a></li>
-            <li><a href="#contact">Kontakt</a></li>
+    <!--=============== HEADER ===============-->
+    <header class="header">
+      <nav class="nav container">
+        <a href="#" class="nav-logo">Maher Ghazzawi</a>
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Start Seite</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#code" class="nav-link">Meine Projekte</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#me-section" class="nav-link">über mich</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">Contact</a>
+            </li>
           </ul>
-        </nav>
-        <div class="navbar-right">
-          <li>
-            <a href="https://github.com/MaherGhazzawi70" target="_blank"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-          </li>
-          <li>
+          <div class="social-links">
+            <a href="https://x.com/" target="_blank" class="social-link">
+              <i class="ri-twitter-x-line"></i>
+            </a>
             <a
-              href="https://www.linkedin.com/in/maher-ghazzawi-304164397/"
+              href="https://github.com/MaherGhazzawi70"
               target="_blank"
-              ><i class="fa-brands fa-linkedin"></i
-            ></a>
-          </li>
-          <li>
-            <a href="http://" target="_blank"
-              ><i class="fa-brands fa-x-twitter"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://mail.google.com/" target="_blank"
-              ><i class="fa-solid fa-at"></i
-            ></a>
-          </li>
+              class="social-link"
+            >
+              <i class="ri-github-fill"></i>
+            </a>
+            <a
+              href="https://mail.google.com/mail/u/0/#inbox"
+              target="_blank"
+              class="social-link"
+            >
+              <i class="ri-mail-line"></i>
+            </a>
+          </div>
         </div>
-      </div>
-      <div id="about">
-        <h1>was wollen Sie von mir erfahren?</h1>
-        <button id="btn1">wer bin ich ?</button>
-        <button id="btn2">Alt und Lebenslauf ?</button>
-        <button id="btn3">Skills</button>
-        <button id="btn4">Sprache</button>
-        <p id="answer"></p>
-      </div>
+        <div class="nav-buttons">
+          <div class="nav-settings" id="switcher-toggle">
+            <i class="ri-settings-3-line"></i>
+          </div>
+          <div class="nav-toggle" id="nav-toggle"></div>
+        </div>
+      </nav>
     </header>
-    <main>
-      <section id="projects">
-        <h1>Hier stelle ich meine Projekte vor:</h1>
-        <h3>Ich habe ein <span id="target"></span> entwickelt.</h3>
-        <div class="container">
-          <ul>
-            <li>
-              <a
-                href="https://maherghazzawi70.github.io/restowebapp/"
-                target="_blank"
-                >resto App</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://maherghazzawi70.github.io/Bubble/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Bubble Spiel</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://maherghazzawi70.github.io/loginPage/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Login Page</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://maherghazzawi70.github.io/Website2/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Website JS</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://maherghazzawi70.github.io/passwordMaker/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Password Ersteller</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://maherghazzawi70.github.io/User_App/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >User App</a
-              >
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section id="Skills">
-        <h3>Meine Fähigkeiten in Code</h3>
-        <div class="skills-container">
-          <div class="sprache">
-            <div class="sprache-container">
-              <img src="./img/HTML.png" alt="" height="100px" width="100px" />
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      <!--=============== HOME ===============-->
+      <section class="home section">
+        <div class="home-container container">
+          <div class="home-content">
+            <h3 class="home-subtitle">
+              Hallo, <span>Ich sterbe eine Ausbildung als </span>
+            </h3>
+            <h1 class="home-title">
+              <span>Fachinformatiker</span> für Anwendungsentwicklung an.
+            </h1>
+            <h3 class="home-job">Ich bin ein Entwickler und Programmierer</h3>
+            <div class="home-banner">
+              <div class="home-img-wrapper">
+                <img
+                  class="home-profile"
+                  src="./assets/img/MeinBildPortfolio-removebg-preview.png"
+                  alt=""
+                />
+              </div>
+              <div class="home-data home-data-one">
+                <span class="home-data-no">über 50</span>
+                <h3 class="home-data-title">
+                  Github <span>Repositories</span>
+                </h3>
+              </div>
+              <div class="home-data home-data-two">
+                <span class="home-data-no">6</span>
+                <h3 class="home-data-title">Demo <span>Projekte</span></h3>
+              </div>
+              <img src="assets/img/shape-1.png" alt="" class="shape shape-1" />
+              <img src="assets/img/shape-2.png" alt="" class="shape shape-2" />
+              <img src="assets/img/shape-3.png" alt="" class="shape shape-3" />
             </div>
-            <div class="sprache-container">
-              <img
-                src="./img/css3-logo-png_seeklogo-186678.png"
-                alt=""
-                height="100px"
-                width="100px"
-              />
+            <p class="home-description">
+              Ich komme aus dem Libanon und habe mein Fachabitur anerkennen
+              lassen, wodurch ich einen Realschulabschluss erhalten habe. In
+              meiner Freizeit programmiere ich,spiele Schach und Videosgames.
+            </p>
+
+            <div class="home-socials social-links">
+              <a href="https://x.com/" target="_blank" class="social-link">
+                <i class="ri-twitter-x-line"></i>
+              </a>
+              <a
+                href="https://github.com/MaherGhazzawi70"
+                target="_blank"
+                class="social-link"
+              >
+                <i class="ri-github-fill"></i>
+              </a>
+              <a
+                href="https://mail.google.com/mail/u/0/#inbox"
+                target="_blank"
+                class="social-link"
+              >
+                <i class="ri-mail-line"></i>
+              </a>
             </div>
-            <div class="sprache-container">
-              <img
-                src="./img/javascript-logo-png_seeklogo-255387.png"
-                alt=""
-                height="100px"
-                width="100px"
-              />
-            </div>
-            <div class="sprache-container">
-              <img
-                src="./img/postgresql_original_wordmark_logo_icon_146392.webp"
-                alt=""
-                height="100px"
-                width="100px"
-              />
+
+            <div class="home-btns">
+              <a
+                download=""
+                class="btn"
+                href="assets/pdf/Lebenslauf Maher Ghazzawi 2026.pdf"
+                >Mein Lebenslauf <br />hochladen</a
+              >
+              <a href="" class="home-link">Unten zeige ich meine Logik</a>
             </div>
           </div>
         </div>
       </section>
-      <section id="contact">
-        <form action="" id="contact-container">
-          <div class="right-part">
-            <div class="right-part-container">
-              <label for="name">Name</label>
-              <input type="text" autocomplete="off" id="name" />
-            </div>
-            <div class="right-part-container">
-              <label for="lastname">Nachname</label>
-              <input type="text" id="lastname" autocomplete="off" />
-            </div>
-            <div class="right-part-container">
-              <label for="email">E-mail</label>
-              <input type="email" autocomplete="off" id="email" />
-            </div>
-            <div class="right-part-container">
-              <label for="Message">Nachricht</label>
-              <textarea
-                name="Nachricht"
-                id="Message"
-                rows="5"
-                cols="40"
-                aria-setsize="non"
-              ></textarea>
-            </div>
+
+      <!--=============== Projekte ===============-->
+      <section class="aboutme section" id="code">
+        <h2>Der Code meiner Projekte wird hier von mir erklärt.</h2>
+        <div class="container-aboutme">
+          <div class="card">
+            <h3 class="title-aboutme">JS Calender APP</h3>
+            <p class="description-aboutme">
+              Das ist mein komplexestes Projekt. Ich habe die Grundstruktur aus
+              einem Tutorial gelernt, weil Date-Logik komplex ist, aber dann
+              komplett verstanden und mit Todo-Features erweitert. Ich kann
+              jeden Teil erklären.
+            </p>
+            <button class="btnhub">
+              Kochen Erklärung:
+              <a
+                href="https://github.com/MaherGhazzawi70/calender/blob/main/script.js"
+                target="_blank"
+                class="Linkhub"
+                >Kochen Code</a
+              >
+            </button>
           </div>
-          <div class="left-part">
-            <h3>Kalender</h3>
-           <div id="title">
-            <button id="befor"><</button>
-            <h3 id="month-title"></h3>
-            <button id="after">></button>
-           </div>
-            <div class="calendar" id="calendar">
-              <div id="month"></div>
-            </div>
+          <div class="card">
+            <h3 class="title-aboutme">JS Yoga APP</h3>
+            <p class="description-aboutme">
+              Workout-Timer mit anpassbaren Übungen. Nutzer können Übungen
+              hinzufügen/löschen, Zeiten einstellen, und die Reihenfolge ändern.
+              Der Code zeigt OOP-Prinzipien, Timer-Logik und Daten-Persistenz.
+            </p>
+            <button class="btnhub">
+              Yoga APP:
+              <a
+                href="https://github.com/MaherGhazzawi70/Yoga-App/blob/main/index.js"
+                target="_blank"
+                class="Linkhub"
+                >JS Code</a
+              >
+            </button>
           </div>
-        </form>
+
+          <div class="card">
+            <h3 class="title-aboutme">JS</h3>
+            <p class="description-aboutme">
+              Quiz-App mit OOP-Architektur. Question- und Quiz-Klassen verwalten
+              Fragen, Antworten und Score-Tracking. Das Display-Objekt trennt
+              View-Logik von Business-Logik.
+            </p>
+            <button class="btnhub">
+              Quiz App(OOP):
+              <a
+                href="https://github.com/MaherGhazzawi70/quiz/blob/main/index.js"
+                target="_blank"
+                class="Linkhub"
+                >JS Code
+              </a>
+            </button>
+          </div>
+          <div class="card">
+            <h3 class="title-aboutme">Kochen API</h3>
+            <p class="description-aboutme">
+              Rezept-Suchmaschine mit asynchroner API-Integration. Nutzt fetch()
+              für externe Datenabfrage, Array-Methoden (map, join) für
+              dynamisches Rendering und Event-Handling für Live-Suche.
+            </p>
+            <button class="btnhub">
+              API Kochen:
+              <a
+                href="https://github.com/MaherGhazzawi70/MealsApp/blob/main/script.js"
+                target="_blank"
+                class="Linkhub"
+                >JS Code</a
+              >
+            </button>
+          </div>
+        </div>
       </section>
+
+      <!--=============== SKILLS ===============-->
+
+      <!--=============== WORK ===============-->
+
+      <!--=============== RESUME ===============-->
+
+      <!--=============== TESTIMONIALS ===============-->
+
+      <!--=============== CONTACT ===============-->
     </main>
-    <script src="index.js"></script>
+
+    <!--=============== FOOTER ===============-->
+
+    <!--=============== STYLE SWITCHER ===============-->
+    <div class="style-switcher" id="style-switcher">
+      <h2 class="style-switcher-title">Style ändern</h2>
+
+      <div class="style-switcher-item">
+        <h3 class="style-switcher-subtitle">Farben</h3>
+        <div class="style-switcher-colors">
+          <span class="style-switcher-color active-color" style="--hue: 165">
+            <i class="ri-check-line"></i>
+          </span>
+
+          <span class="style-switcher-color" style="--hue: 260">
+            <i class="ri-check-line"></i>
+          </span>
+
+          <span class="style-switcher-color" style="--hue: 345">
+            <i class="ri-check-line"></i>
+          </span>
+
+          <span class="style-switcher-color" style="--hue: 65">
+            <i class="ri-check-line"></i>
+          </span>
+
+          <span class="style-switcher-color" style="--hue: 15">
+            <i class="ri-check-line"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="style-switcher-item">
+        <h3 class="style-switcher-subtitle">Theme</h3>
+        <div class="style-switcher-themes">
+          <div class="style-switcher-theme">
+            <input
+              type="radio"
+              class="style-switcher-input"
+              name="body-theme"
+              value="light"
+              checked="true"
+              id="light-theme"
+            />
+            <label for="light-theme" class="style-switcher-label">Hell</label>
+          </div>
+
+          <div class="style-switcher-theme">
+            <input
+              type="radio"
+              class="style-switcher-input"
+              name="body-theme"
+              value="dark"
+              id="dark-theme"
+            />
+            <label for="dark-theme" class="style-switcher-label">Dunkel</label>
+          </div>
+        </div>
+      </div>
+      <div class="style-switcher-close" id="switcher-close">
+        <i class="ri-close-line"></i>
+      </div>
+    </div>
+
+    <!-- Über Mich -->
+    <section class="me-section" id="me-section">
+      <div class="me-container">
+        <h2 class="me-title">Erfahren Sie mehr über mich</h2>
+        <div class="destcription-me">
+          <p class="p-me">
+            Ich bin 24 Jahre alt und ich suche eine Ausbildung als
+            Fachinformatiker Anwendungsentwicklung, daher habe ich diese
+            Webseite selbst gebaut. Ich habe mein Fachabitur im Libanon abgeschlossen und hier in Deutschland
+            anerkennen lassen und einen Realschulabschluss erhalten. Außerdem habe
+            ich eine C1 Telc Hochschule gemacht, momentan warte ich auf das
+            Ergebnis. Ich möchte diesen Beruf erlernen, da Informatik mich
+            begeistert.
+          </p>
+          <p class="p-me">
+            Ich liebe Informatik und ich möchte mehr über diese Welt erfahren.
+            Ich möchte aus meinem Hobby meinen Job machen, deshalb möchte ich
+            diesen Beruf erlernen. Ich liebe mit ein Team arbeiten,infolgedessen
+            lerne ich Programmieren, um mein zukünftiges Team unterstützen
+            und mit ihnen wachsen.
+          </p>
+        </div>
+      </div>
+      <div class="me-container-part2">
+        <div class="part1">
+        <img src="./assets/img/html.png" alt="">
+        <img src="./assets/img/css.png" alt="">
+        </div>
+        <div class="part2">
+        <img id="jsimg" src="./assets/img/js-removebg-preview.png" alt="">
+        <img src="./assets/img/csh-removebg-preview.png" alt="">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Contact section -->
+     <section class="contact" id="contact">
+      <h1>Sie können mir gerne schreiben.</h1>
+      <form class="message-container" id="contact-form">
+        <div class="inputs">
+        <input type="text" name="name" id="name" placeholder="schreiben Sie ihre Name!" required autocomplete="off" >
+        <input type="text" name="lastname" id="lastname" placeholder="schreiben Sie ihre Nachname!" required autocomplete="off">
+        <input type="email" name="mail" id="mail" placeholder="schreiben Sie ihre E-mail!" required autocomplete="off">
+        </div>
+        <div class="textarea">
+        <textarea name="message" id="message" cols="30" rows="4" placeholder="Schreiben Sie Ihre Nachricht" onchange={handlfunction}></textarea>
+        <label for="message" id="answer" >Ich werde Ihnen bald antworten. Vielen Dank für die Nachricht <i class="ri-check-line"></i></label>
+        </div>
+        <button type="submit" id="submit">Nachricht senden</button>
+      </form>
+     </section>
+
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
