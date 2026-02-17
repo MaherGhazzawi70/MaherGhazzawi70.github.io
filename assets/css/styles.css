@@ -40,10 +40,6 @@
   --transition: cubic-bezier(0.3, 0, 0.3, 1);
 }
 
-/* Responsive typography */
-@media screen and (max-width: 1024px) {
-}
-
 /*=============== DARK THEME ===============*/
 .dark{
   --title-color: hsl(0,0%,100%);
@@ -538,12 +534,16 @@ border-bottom: 1px solid var(--shadow-color);
   color: var(--white-color);
 }
 .Linkhub{
-   color: var(--white-color);
+   background: var(--first-color);
    cursor:pointer;
    transition: 0.5s ease;
+   padding: 10px 20px;
+   min-height: 10px;
+   width: 200px;
+   color: black;
 }
 .Linkhub:hover{
-  background: blue;
+  color: var(--white-color);
   border-radius: 5px;
 }
 .me-section{
@@ -558,20 +558,20 @@ border-bottom: 1px solid var(--shadow-color);
   margin-bottom: 20px;
   text-transform: uppercase;
   color: var(--first-color);
-}
-.part1 img,
-.part2 img{
-  height: 200px;
-  width: 200px;
+  font-size: 1.8rem;
 }
 .me-container-part2{
   display: grid;
-  grid-template-columns: 50% 50%;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(3, 1fr);
+grid-column-gap: 50px;
+grid-row-gap: 44px;
 }
-.p-me{
-  margin-bottom: 20px;
+.me-container{
+  margin: 0 auto;
+}
+.me-container p{
   font-size: 1.5rem;
-  max-width: 600px;
 }
 
 
@@ -651,17 +651,87 @@ margin: 0 auto;
 
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
+  body{
+    overflow-x: hidden;
+  }
+  .container-aboutme{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .card{
+    margin: 0 auto;
+  }
+  .message-container{
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  #message{
+    margin-top: 40px;
+    height: 200px;
+    width: 400px;
+  }
+  .home-profile{
+    display: none;
+  }
+  .home-img-wrapper{
+display: none;
+  }
+  .home-data{
+    display: none;
+  } 
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1050px) {
+.home-subtitle{
+    font-size: 1.2rem;
+  }
+.home-title{
+    font-size: 1.2rem;
+  }
+  .home-description{
+    max-width: 500px;
+  }
+  .me-section{
+    display: block;
+  }
+  .message-container{
+    grid-template-columns: 1fr ;
+  }
+  .contact h1{
+    font-size: 1rem;
+  }
+  .home-container{
+  padding-block: 0;
+}
 }
 
 /* For medium devices */
+
 @media screen and (max-width: 768px) {
+  .me-container-part2{
+    display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: repeat(6, 1fr);
+grid-column-gap: 50px;
+grid-row-gap: 44px;
+  }
 }
+.Linkhub{
+  margin: 0 auto;
+}
+  .me-title{
+    font-size: 0.8rem;
+  }
+  .p-me{
+    font-size: 0.8rem;
+  }
+
 
 @media screen and (max-width: 576px) {
+  
 }
 
 /* For small devices */
