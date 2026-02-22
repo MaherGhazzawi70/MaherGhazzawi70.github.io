@@ -1,0 +1,97 @@
+.aboutme{
+  text-align: center;
+  transition: bottom 1s var(--transition);
+}
+.aboutme h2{
+  margin: 20px 0;
+  font-weight: var(--font-bold);
+  color: var(--first-color);
+}
+.container-aboutme{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  max-width: 90%;
+  margin: 0 auto;
+}
+.container-aboutme .card{
+  background: pink;
+  height: 400px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--white-color);
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 4px 4px var(--shadow-color);
+}
+.title-aboutme{
+  background: var(--first-color);
+  padding: 5px 20px;
+  color: white;
+  border-radius: 5px;
+}
+.description-aboutme{
+  max-width: 280px;
+  font-size: 1.4rem;
+  background: rgba(0, 0, 0, 0.501);
+  min-height: 250px;
+}
+.btnhub{
+  background: var(--first-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--white-color);
+}
+.Linkhub{
+   background: var(--first-color);
+   cursor:pointer;
+   transition: 0.5s ease;
+   padding: 10px 20px;
+   min-height: 10px;
+   width: 200px;
+   color: black;
+}
+.Linkhub:hover{
+  color: var(--white-color);
+  border-radius: 5px;
+  background: var(--first-color);
+}
+.me-section{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.me-container{
+  max-width: 80%;
+  text-align: center;
+}
+.me-container h2{
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: var(--first-color);
+  font-size: 1.8rem;
+}
+.me-container-part2 a{
+  text-align: center;
+  cursor: pointer;
+  background: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.me-container-part2{
+  display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(3, 1fr);
+grid-column-gap: 50px;
+grid-row-gap: 44px;
+}
+.me-container{
+  margin: 0 auto;
+}
+.me-container p{
+  font-size: 1.5rem;
+}
